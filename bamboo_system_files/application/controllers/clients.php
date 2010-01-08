@@ -168,7 +168,8 @@ class Clients extends MY_Controller {
 								'postal_code' => $this->input->post('postal_code'),
 								'website' => $this->input->post('website'),
 								'tax_status' => $this->input->post('tax_status'),
-								'tax_code' => $this->input->post('tax_code')
+                'tax_code' => $this->input->post('tax_code'),
+                'default_rate' => $this->input->post('default_rate')
 								);
 
 			$this->clients_model->updateClient($clientInfo['id'], $clientInfo);

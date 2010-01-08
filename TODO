@@ -1,0 +1,3 @@
+* add a default rate for each client
+* add a global default rate to settings
+* config option for default number of lines on a new invoice??? ( probably not needed )

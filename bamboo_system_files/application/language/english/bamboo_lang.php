@@ -57,6 +57,7 @@ $lang['clients_to'] = 'to';
 $lang['clients_update_client'] = 'Update Client';
 $lang['clients_website'] = 'Website';
 $lang['clients_you_have'] = 'You have ';
+$lang['clients_default_rate'] = 'Default rate';
 
 $lang['error_date_fill'] = 'There appeared to be errors. Please note that the date must be in the format YYYY-MM-DD, and the amount must be a number. Please go back and try again.';
 $lang['error_date_format'] = 'The date must be in the format YYYY-MM-DD';

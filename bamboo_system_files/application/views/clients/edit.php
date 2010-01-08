@@ -18,6 +18,8 @@ $this->load->view('header');
 
 	<p><label><span><?php echo $this->lang->line('settings_tax_code');?>:</span> <input type="text" name="tax_code" id="tax_code" size="50" maxlength="75" value="<?php echo ($this->validation->tax_code) ? ($this->validation->tax_code) : ($row->tax_code);?>" /></label> <?php echo $this->validation->tax_code_error; ?></p>
 
+	<p><label><span><?php echo $this->lang->line('clients_default_rate');?>:</span> <input type="text" name="default_rate" id="default_rate" size="50" maxlength="10" value="<?php echo ($this->validation->default_rate) ? ($this->validation->default_rate) : ($row->default_rate);?>" /></label> <?php echo $this->validation->default_rate_error; ?></p>
+
 	<fieldset style="clear:left;"><legend><?php echo $this->lang->line('invoice_tax_status');?>:</legend>
 	<?php if ($row->tax_status): ?>
 	<label for="taxable"><input type="radio" name="tax_status" id="taxable" value="1" checked="checked" class="noborder" /><?php echo $this->lang->line('invoice_taxable');?></label><br />

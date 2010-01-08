@@ -444,6 +444,28 @@ class Install extends Controller {
 			$updates .= "<li>Upgrade to 0.8.9 success.</li>";
 		}
 
+		// regrab data, for the new update
+		$version = $this->db->get('settings')->row()->bambooinvoice_version;
+
+		if ($version == '0.8.9')
+		{
+			$field = array(
+							'default_rate' => array(
+																'type' => 'DECIMAL', 
+                                'constraint' => '7,2',
+																'default' => 0
+															)
+						);
+
+			$this->dbforge->add_column('clients', $field);
+
+			$this->db->set('bambooinvoice_version', '0.8.9.1');
+			$this->db->where('id', 1);
+			$this->db->update('settings');
+
+			$updates .= "<li>Upgrade to 0.8.9.1 success.</li>";
+		}
+
 		$updates .= '</ul>';
 
 		// everything's done now, let's optimize and then brag
